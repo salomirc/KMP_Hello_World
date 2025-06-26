@@ -9,6 +9,8 @@ interface Platform {
         get() = Default
 }
 
+expect fun getPlatform(): Platform
+
 enum class PlatformType {
     ANDROID, IOS, DESKTOP, WEB
 }
@@ -28,5 +30,3 @@ sealed interface UIContract {
     }
 
 }
-
-expect fun getPlatform(): Platform
